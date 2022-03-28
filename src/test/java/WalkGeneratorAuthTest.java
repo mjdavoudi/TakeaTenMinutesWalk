@@ -27,7 +27,7 @@ public class WalkGeneratorAuthTest {
 
     @Test
     void complex_walk_to_return_to_starting_point() {
-        char[] walkDirection = {'n','s','n','s','n','s','n','s','n','s'};
+        char[] walkDirection = {'n', 's', 'n', 's', 'n', 's', 'n', 's', 'n', 's'};
         WalkGeneratorAuth walkGeneratorAuth = new WalkGeneratorAuth(walkDirection);
         Assertions.assertTrue(walkGeneratorAuth.willReturnToStartingPoint());
     }
@@ -43,7 +43,7 @@ public class WalkGeneratorAuthTest {
 
     @Test
     void take_more_than_zero_time() {
-        char[] walkDirection = {'n','s','n','s','n'};
+        char[] walkDirection = {'n', 's', 'n', 's', 'n'};
         WalkGeneratorAuth walkGeneratorAuth = new WalkGeneratorAuth(walkDirection);
         int time = 5;
         Assertions.assertTrue(walkGeneratorAuth.takeTime(time));
@@ -68,7 +68,7 @@ public class WalkGeneratorAuthTest {
 
     @Test
     void return_to_starting_point_and_take_10_min() {
-        char[] walkDirection = {'n','s','n','s','n','s','n','s','n','s'};
+        char[] walkDirection = {'n', 's', 'n', 's', 'n', 's', 'n', 's', 'n', 's'};
         int time = 10;
         WalkGeneratorAuth walkGeneratorAuth = new WalkGeneratorAuth(walkDirection);
         Assertions.assertTrue(walkGeneratorAuth.willReturnToStartingPoint() && walkGeneratorAuth.takeTime(time));

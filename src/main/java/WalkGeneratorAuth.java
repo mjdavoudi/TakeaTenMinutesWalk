@@ -1,5 +1,3 @@
-import java.util.ArrayList;
-
 public class WalkGeneratorAuth {
     char[] walkDirection;
 
@@ -12,8 +10,8 @@ public class WalkGeneratorAuth {
         int southDirection = 0;
         int eastDirection = 0;
         int westDirection = 0;
-        for (char direction: this.walkDirection) {
-            switch (direction){
+        for (char direction : this.walkDirection) {
+            switch (direction) {
                 case 'n':
                     northDirection++;
                     break;
