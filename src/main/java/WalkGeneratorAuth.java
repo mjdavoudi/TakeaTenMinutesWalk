@@ -8,28 +8,28 @@ public class WalkGeneratorAuth {
     }
 
     public boolean willReturnToStartingPoint() {
-        int nDirection = 0;
-        int sDirection = 0;
-        int eDirection = 0;
-        int wDirection = 0;
+        int northDirection = 0;
+        int southDirection = 0;
+        int eastDirection = 0;
+        int westDirection = 0;
         for (char direction: this.walkDirection) {
             switch (direction){
                 case 'n':
-                    nDirection++;
+                    northDirection++;
                     break;
                 case 's':
-                    sDirection++;
+                    southDirection++;
                     break;
                 case 'e':
-                    eDirection++;
+                    eastDirection++;
                     break;
                 case 'w':
-                    wDirection++;
+                    westDirection++;
                     break;
             }
 
         }
-        return (nDirection == sDirection) && (eDirection == wDirection);
+        return (northDirection == southDirection) && (eastDirection == westDirection);
     }
 
     public boolean takeTime(int time) {
